@@ -17,7 +17,9 @@ const Navbar = () => {
           Search Movies
         </a>
       </div>
-      <div>
+
+      <div className='flex items-center'>
+        <div className='border-l-[0.8px] border-secondary h-8'></div>
         <button className='text-primary font-kanit text-xl px-3 py-1 mx-1'>Sign In</button>
         <button className='text-primary bg-transparent border border-blue-500 mx-1 rounded font-kanit px-3 py-1 text-xl hover:text-white hover:border-transparent hover:bg-primary transition-all duration-100'>
           Sign Up
