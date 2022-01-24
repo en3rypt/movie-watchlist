@@ -5,11 +5,13 @@ module.exports = {
     colors: {
       white: 'white',
       black: 'black',
+      primary: '#0099FF',
       transparent: 'transparent',
       current: 'currentColor'
     },
     fontFamily: {
-      sans: 'Inter'
+      sans: 'Inter',
+      kanit: ['Kanit', 'sans-serif']
     },
     extend: {}
   },
