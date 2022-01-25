@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Navbar from 'components/Navbar'
 import MainPage from 'components/MainPage'
+import Features from 'components/Features'
 const Home = () => {
   return (
     <>
@@ -9,6 +10,7 @@ const Home = () => {
       </Head>
       <Navbar />
       <MainPage />
+      <Features />
     </>
   )
 }

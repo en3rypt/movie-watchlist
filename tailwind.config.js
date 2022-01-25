@@ -7,6 +7,9 @@ module.exports = {
       black: 'black',
       primary: '#00A1DF',
       secondary: '#A1E7FF',
+      gradient1l: '#00D2FF',
+      gradient1r: '#3A7BD5',
+      dark: '#0E37A3',
       transparent: 'transparent',
       current: 'currentColor'
     },

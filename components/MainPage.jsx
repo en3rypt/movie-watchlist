@@ -33,8 +33,8 @@ const MainPage = () => {
       >
         <defs>
           <linearGradient id='gradient'>
-            <stop offset='10%' stopColor='#00D2FF' />
-            <stop offset='90%' stopColor='#3A7BD5' />
+            <stop offset='0%' stopColor='#00D2FF' />
+            <stop offset='100%' stopColor='#3A7BD5' />
           </linearGradient>
         </defs>
       </Wave>
