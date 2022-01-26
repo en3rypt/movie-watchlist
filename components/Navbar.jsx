@@ -1,11 +1,11 @@
 import react from 'react'
-
+import logo from 'components/assets/mymovielist.svg'
+import Image from 'next/image'
 const Navbar = () => {
   return (
-    <div className='w-full h-14 shadow-xl flex justify-between items-center px-4'>
-      <div>
-        <h1>logo</h1>
-      </div>
+    <div className='w-full  shadow-xl flex justify-between items-center px-4'>
+      <Image src={logo} height='60' width='60' className='p-0' />
+
       <div>
         <a href='#' className='text-primary font-kanit px-4'>
           Latest Movies
