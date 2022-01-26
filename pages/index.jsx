@@ -3,6 +3,7 @@ import Navbar from 'components/Navbar'
 import MainPage from 'components/MainPage'
 import Features from 'components/Features'
 import Contact from 'components/Contact'
+import Footer from 'components/Footer'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <MainPage />
       <Features />
       <Contact />
+      <Footer />
     </>
   )
 }
