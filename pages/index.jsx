@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Navbar from 'components/Navbar'
 import MainPage from 'components/MainPage'
 import Features from 'components/Features'
+import Contact from 'components/Contact'
+
 const Home = () => {
   return (
     <>
@@ -11,6 +13,7 @@ const Home = () => {
       <Navbar />
       <MainPage />
       <Features />
+      <Contact />
     </>
   )
 }

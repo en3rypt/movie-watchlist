@@ -9,6 +9,8 @@ module.exports = {
       secondary: '#A1E7FF',
       gradient1l: '#00D2FF',
       gradient1r: '#3A7BD5',
+      gradient2l: '#00F5A0',
+      gradient2r: '#00D9F5',
       dark: '#0E37A3',
       transparent: 'transparent',
       current: 'currentColor'

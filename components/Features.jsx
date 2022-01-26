@@ -1,4 +1,5 @@
 import react from 'react'
+import Wave from 'react-wavify'
 import Image from 'next/image'
 import trackMovies from 'components/assets/trackmovies.svg'
 import addToFavorutes from 'components/assets/addToFavouriets.svg'
@@ -31,7 +32,7 @@ const Features = () => {
         <Image src={addToFavorutes} width='350' height='203' />
       </div>
 
-      <div className='flex items-center justify-around mx-5 mb-20'>
+      <div className='flex items-center justify-around mx-5 pb-6'>
         <div className='w-1/2'>
           <div className='border-t-4 border-dark w-52'></div>
           <h3 className='font-kanit font-bold text-white text-4xl pb-3 pt-2'>Rate Your Watched Movies</h3>
@@ -42,6 +43,23 @@ const Features = () => {
         </div>
         <Image src={rating} width='400' height='213' />
       </div>
+      <Wave
+        className='bg-gradient-to-r from-gradient1l to-gradient1r  relative top-3'
+        fill='url(#gradient1)'
+        options={{
+          height: 20,
+          amplitude: 40,
+          speed: 0.15,
+          points: 3
+        }}
+      >
+        <defs>
+          <linearGradient id='gradient1'>
+            <stop offset='0%' stopColor='#00F5A0' />
+            <stop offset='100%' stopColor='#00D9F5' />
+          </linearGradient>
+        </defs>
+      </Wave>
     </div>
   )
 }
