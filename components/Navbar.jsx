@@ -7,14 +7,20 @@ const Navbar = () => {
       <Image src={logo} height='60' width='60' className='p-0' />
 
       <div>
-        <a href='#' className='text-primary font-kanit px-4'>
-          Latest Movies
+        <a href='#' className='text-primary font-kanit text-xl px-4'>
+          My List
         </a>
-        <a href='#' className='text-primary font-kanit px-4'>
-          up Coming Movies
+        <a href='#' className='text-primary font-kanit text-xl px-4'>
+          Favourites
         </a>
-        <a href='#' className='text-primary font-kanit px-4'>
-          Search Movies
+        <a href='#' className='text-primary font-kanit text-xl px-4'>
+          Wishlist
+        </a>
+        <a href='#' className='text-primary font-kanit text-xl px-4'>
+          Explore
+        </a>
+        <a href='#' className='text-primary font-kanit text-xl px-4'>
+          Home
         </a>
       </div>
 
