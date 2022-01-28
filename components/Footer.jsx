@@ -2,7 +2,7 @@ import react from 'react'
 
 const Footer = () => {
   return (
-    <div className='bg-gradient-to-r from-gradient1l to-gradient1r relative -top-2'>
+    <div className='bg-gradient-to-r from-gradient1l to-gradient1r absolute w-full'>
       <div className='px-3 sm:px-24 text-center sm:text-left'>
         <h3 className='font-kanit text-white text-2xl sm:text-5xl font-light'>
           <span className='font-bold'>Never Miss Out.</span> Sign-up For Our newsletter.

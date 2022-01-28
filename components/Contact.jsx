@@ -76,7 +76,7 @@ const ConstantSourceNode = () => {
         </div>
       </div>
       <Wave
-        className='bg-gradient-to-r from-gradient2l to-gradient2r  relative top-3'
+        className='bg-gradient-to-r from-gradient2l to-gradient2r  relative top-4'
         fill='url(#gradient2)'
         options={{
           height: 20,
@@ -92,6 +92,23 @@ const ConstantSourceNode = () => {
           </linearGradient>
         </defs>
       </Wave>
+      {/* <Wave
+        className='bg-gradient-to-l from-gradient1l to-gradient1r  relative top-4 rotate-180 -z-10'
+        fill='url(#gradient2)'
+        options={{
+          height: 20,
+          amplitude: 40,
+          speed: 0.15,
+          points: 3
+        }}
+      >
+        <defs>
+          <linearGradient id='gradient2'>
+            <stop offset='0%' stopColor='#00D9F5' />
+            <stop offset='100%' stopColor='#00F5A0' />
+          </linearGradient>
+        </defs>
+      </Wave> */}
     </div>
   )
 }

@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Movie Watchlist</title>
+        <title>My Movie List</title>
       </Head>
       <Navbar />
       <MainPage />
