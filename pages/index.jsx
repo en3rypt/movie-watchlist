@@ -1,12 +1,21 @@
 import Head from 'next/head'
+import Navbar from 'components/Navbar'
+import MainPage from 'components/MainPage'
+import Features from 'components/Features'
+import Contact from 'components/Contact'
+import Footer from 'components/Footer'
 
 const Home = () => {
   return (
     <>
       <Head>
-        <title>Movie Watchlist</title>
+        <title>My Movie List</title>
       </Head>
-      <h1>Hello World!</h1>
+      <Navbar />
+      <MainPage />
+      <Features />
+      <Contact />
+      <Footer />
     </>
   )
 }
