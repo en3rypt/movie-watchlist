@@ -67,7 +67,7 @@ const Home = () => {
               felis, duis turpis. Elit lacus proin nibh at.
             </p>
           </div>
-          <Image src={trackMovies} width='280' height='210' ca />
+          <Image src={trackMovies} width='280' height='210' />
         </div>
 
         <div className='flex items-center justify-around  mx-10 md:mx-5 md:mb-20 flex-col md:flex-row-reverse text-center md:text-right'>

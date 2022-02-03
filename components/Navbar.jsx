@@ -6,6 +6,7 @@ import SidePanel from './SidePanel'
 const Navbar = () => {
   const [isMobilePanelOpen, setIsOpen] = useState(false)
   const [searchText, setSearchText] = useState('')
+  const [isSearch, setIsSearch] = useState(false)
   return (
     <div className='w-full  shadow-xl flex justify-between items-center px-4'>
       <div className='flex items-center justify-start'>
@@ -38,32 +39,55 @@ const Navbar = () => {
 
       <div className=' items-center flex'>
         <div className='item-center flex'>
-          <div class='flex mr-3'>
-            <div class=' relative mr-0 md:mr-0 block'>
-              <div class=' flex xs:absolute inset-y-0 left-0 items-center pl-3 pointer-events-none'>
-                <svg
-                  class='w-5 h-5 text-gray-500'
-                  fill='#0099FF'
-                  viewBox='0 0 20 20'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
+          <div className='flex mr-3'>
+            <button className=' flex xs:hidden inset-y-0 left-0 items-center pl-3 ' onClick={() => setIsSearch(true)}>
+              <svg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                <path
+                  d='M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z'
+                  stroke='#000000'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                />
+                <path
+                  d='M19 18.9999L14.65 14.6499'
+                  stroke='#000000'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                />
+              </svg>
+            </button>
+            <div className=' relative mr-0 md:mr-0 xs:block hidden '>
+              <button
+                className=' flex xs:absolute inset-y-0 left-0 items-center pl-3 '
+                onClick={() => console.log('clicked')}
+              >
+                <svg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
                   <path
-                    fill-rule='evenodd'
-                    d='M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z'
-                    clip-rule='evenodd'
-                  ></path>
+                    d='M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z'
+                    stroke='#000000'
+                    strokeWidth='2'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                  />
+                  <path
+                    d='M19 18.9999L14.65 14.6499'
+                    stroke='#000000'
+                    strokeWidth='2'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                  />
                 </svg>
-              </div>
+              </button>
+
               <input
                 type='text'
                 id='email-adress-icon'
-                class='hidden xs:block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-text-primary sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                className=' block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-text-primary sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
                 placeholder='Search...'
                 value={searchText}
-                onChange={event => {
-                  setSearchText(event.target.value)
-                  console.log(searchText)
-                }}
+                onChange={event => setSearchText(event.target.value)}
               />
             </div>
           </div>
@@ -83,10 +107,33 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
-
+      <div className={`z-[21] absolute top-0 left-0 h-screen w-full bg-white ${isSearch ? 'block' : 'hidden'}`}>
+        <div className=' relative mt-6 mx-6'>
+          <button className=' absolute left-3 top-3' onClick={() => setIsSearch(false)}>
+            <svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
+              <path d='M15 8H1' stroke='black' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
+              <path d='M8 15L1 8L8 1' stroke='black' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
+            </svg>
+          </button>
+          <input
+            type='text'
+            id='email-adress-icon'
+            className=' block p-2 px-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-black text-sm '
+            placeholder='Search...'
+            value={searchText}
+            onChange={event => setSearchText(event.target.value)}
+          />
+          <button className=' absolute top-3 right-3 ' onClick={() => setSearchText('')}>
+            <svg width='16' height='16' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'>
+              <path d='M13 1L1 13' stroke='#000000' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
+              <path d='M1 1L13 13' stroke='#000000' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
+            </svg>
+          </button>
+        </div>
+      </div>
       <SidePanel show={isMobilePanelOpen} onBackdropClick={() => setIsOpen(false)}>
-        <div className='m-5 flex justify-between '>
-          <Link href='/' className='hover:cursor-pointer'>
+        <div className='m-5 flex justify-between items-center'>
+          <Link href='/'>
             <a
               onClick={() => {
                 setIsOpen(false)
@@ -97,8 +144,8 @@ const Navbar = () => {
           </Link>
           <button className='' onClick={() => setIsOpen(false)}>
             <svg width='20' height='20' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'>
-              <path d='M13 1L1 13' stroke='#0099ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />
-              <path d='M1 1L13 13' stroke='#0099ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />
+              <path d='M13 1L1 13' stroke='#0099ff' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
+              <path d='M1 1L13 13' stroke='#0099ff' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
             </svg>
           </button>
         </div>
