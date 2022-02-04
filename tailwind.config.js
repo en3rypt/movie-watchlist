@@ -19,7 +19,11 @@ module.exports = {
       sans: 'Inter',
       kanit: ['Kanit', 'sans-serif']
     },
-    extend: {}
+    extend: {
+      screens: {
+        xs: '480px'
+      }
+    }
   },
   plugins: [require('@tailwindcss/aspect-ratio')]
 }
