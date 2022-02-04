@@ -78,6 +78,7 @@ const Explore = () => {
               overview={movie.overview}
               rating={movie.vote_average}
               releaseDate={movie.release_date}
+              genre_ids={movie.genre_ids}
             />
           </Transition>
         ))}
