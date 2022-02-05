@@ -14,7 +14,7 @@ const MovieRow = props => {
   return (
     <div>
       <h3 className='text-primary text-kanit font-black text-2xl pl-16 mt-10'>{props.title}</h3>
-      <div className='flex  items-start flex-wrap justify-center'>
+      <div className='flex overflow-x-auto scrollbar-hide items-start  justify-center'>
         {movies.map(movie => (
           <SmallCard
             key={movie.id}
