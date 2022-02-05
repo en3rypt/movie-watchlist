@@ -115,8 +115,8 @@ const Card = props => {
         </div>
         {/* <h3 className='text-white pt-5 pb-2'>Over View</h3> */}
         <p className='text-white  pt-5 font-knait text-sm font-extralight'>
-          {props.overview.length > 354
-            ? parse(`${props.overview.slice(0, 354)}...<Link to="/"><a >Read More</a><Link>`)
+          {props.overview.length > 250
+            ? parse(`${props.overview.slice(0, 250)}...<Link to="/"><a >Read More</a><Link>`)
             : props.overview}
         </p>
       </div>

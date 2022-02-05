@@ -1,50 +1,23 @@
 import { useEffect, useState } from 'react'
 import Navbar from 'components/Navbar'
 import Card from 'components/Card'
-import Slider from 'react-slick'
-import Image from 'next/image'
 import { Transition } from '@headlessui/react'
+import MovieRow from 'components/MovieRow'
+import MOVIE_API, { NOW_PLAYING_API } from 'components/API'
 
-const LATEST_API =
-  'https://api.themoviedb.org/3/movie/now_playing?api_key=4de2c28fb14516591e0910cd1df22d69&language=en-US&page=1'
-const POPULAR_API =
-  'https://api.themoviedb.org/3/movie/popular?api_key=4de2c28fb14516591e0910cd1df22d69&language=en-US&page=1'
-
-// function SampleNextArrow(props) {
-//   const { className, style, onClick } = props
-//   console.log(className, style)
-//   return <div className='  -translate-y-1/2 h-2 w-2 bg-black' onClick={onClick} />
-// }
-
-// function SamplePrevArrow(props) {
-//   const { className, style, onClick } = props
-//   return <div className={className} style={{ ...style, display: 'block', background: 'black' }} onClick={onClick}></div>
-// }
 const Explore = () => {
   const [nowPlaying, setNowPlaying] = useState([])
-  const [popular, setPopular] = useState([])
   const [showing, setShowing] = useState(0)
   const [tDirection, setTDirection] = useState(true)
-  // const settings = {
-  //   dots: false,
-  //   fade: false,
-  //   infinite: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 3500,
-  //   pauseOnHover: true,
-  //   nextArrow: <SampleNextArrow />,
-  //   prevArrow: <SamplePrevArrow />
-  // }
 
   useEffect(() => {
-    fetch(LATEST_API)
+    fetch(NOW_PLAYING_API)
       .then(res => res.json())
       .then(data => {
         setNowPlaying(data.results)
       })
   }, [])
+
   return (
     <div>
       <Navbar />
@@ -94,19 +67,9 @@ const Explore = () => {
           </svg>
         </button>
       </div>
-      {/* <Slider {...settings} className='mt-5 mx-16 bg-black rounded-xl '>
-        {nowPlaying.map(movie => (
-          <Card
-            key={movie.id}
-            path={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
-            title={movie.original_title}
-            overview={movie.overview}
-            rating={movie.vote_average}
-            releaseDate={movie.release_date}
-          />
-        ))}
-        
-      </Slider> */}
+      {MOVIE_API.map(([title, url]) => (
+        <MovieRow title={title} url={url} />
+      ))}
     </div>
   )
 }
