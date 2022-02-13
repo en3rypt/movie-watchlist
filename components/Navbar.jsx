@@ -151,22 +151,47 @@ const Navbar = () => {
         </div>
         <div className='flex flex-col '>
           <Link href='/comingsoon'>
-            <a href='#' className='text-black font-kanit text-lg px-4 my-3'>
+            <a
+              onClick={() => {
+                setIsOpen(false)
+              }}
+              href='#'
+              className='text-black font-kanit text-lg px-4 my-3'
+            >
               My List
             </a>
           </Link>
           <Link href='/comingsoon'>
-            <a href='#' className='text-black font-kanit text-lg px-4 my-3'>
+            <a
+              onClick={() => {
+                setIsOpen(false)
+              }}
+              href='#'
+              className='text-black font-kanit text-lg px-4 my-3'
+            >
               Favourites
             </a>
           </Link>
           <Link href='/comingsoon'>
-            <a href='#' className='text-black font-kanit text-lg px-4 my-3'>
+            <a
+              onClick={() => {
+                setIsOpen(false)
+              }}
+              href='#'
+              className='text-black font-kanit text-lg px-4 my-3'
+            >
               Wishlist
             </a>
           </Link>
           <Link href='/explore'>
-            <a className='text-black font-kanit text-lg px-4 my-3'>Explore</a>
+            <a
+              onClick={() => {
+                setIsOpen(false)
+              }}
+              className='text-black font-kanit text-lg px-4 my-3'
+            >
+              Explore
+            </a>
           </Link>
         </div>
         <div className='flex flex-col items-center mt-4 py-5 border-y-[1px] border-[#eeeeF8]'>

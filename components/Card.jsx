@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import logo from 'components/assets/mymovielist.svg'
 import parse from 'html-react-parser'
-import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Card = props => {
+  const router = useRouter()
   const genres_list = [
     {
       id: 28,
@@ -84,7 +85,7 @@ const Card = props => {
   ]
 
   return (
-    <div className='flex rounded-xl  sm:rounded-none h-[30vh] sm:h-[60vh]' onClick={console.log('clicked')}>
+    <div className='cursor-pointer flex  min-h-[60vh]' onClick={() => router.push(`/explore/${props.id}`)}>
       <div className='p-10  flex-col shrink-0 max-w-[400px] bg-black hidden sm:flex'>
         <h1 className='text-white font-kanit text-3xl font-bold '>{props.title}</h1>
         <div className='flex justify-start items-center'>

@@ -37,6 +37,13 @@ const ANIMATION_API =
 const FAMILY_API =
   'https://api.themoviedb.org/3/discover/movie?api_key=4de2c28fb14516591e0910cd1df22d69&language=en-US&sort_by=popularity.desc&with_genres=10751'
 
+// const SEARCH_API =
+//   'https://api.themoviedb.org/3/search/movie?api_key=4de2c28fb14516591e0910cd1df22d69&language=en-US&query=' +
+//   searchQuery +
+//   '&page=1&include_adult=false'
+
+// const FILTER_API = 'https://api.themoviedb.org/3/discover/movie?api_key=4de2c28fb14516591e0910cd1df22d69&language=en-US&sort_by=popularity.desc&with_genres='+ genreId +'&page=1'
+
 const MOVIE_API = [
   ['Up Coming Movies', UP_COMING_API],
   ['Trending Movies', TRENDING_API],

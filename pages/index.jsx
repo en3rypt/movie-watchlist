@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>My Movie List</title>
+        <title>My Watch List</title>
       </Head>
 
       <Navbar />
