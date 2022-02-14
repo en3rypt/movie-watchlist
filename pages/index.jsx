@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Wave from 'react-wavify'
 import Image from 'next/image'
+import Link from 'next/link'
 import Navbar from 'components/Navbar'
 import mainpageimg from 'components/assets/main.svg'
 import trackMovies from 'components/assets/trackmovies.svg'
@@ -28,12 +29,16 @@ const Home = () => {
               Lorem ipsum dolor sit.
             </h1>
             <div className='mt-10 flex justify-between flex-col  items-center sm:flex-row sm:justify-center md:justify-start'>
-              <button className='text-white bg-primary border border-blue-500 rounded font-kanit text-2xl sm:text-3xl px-6 py-2   sm:mr-5'>
-                Sign Up
-              </button>
-              <button className='text-primary bg-transparent border border-blue-500  rounded font-kanit  text-2xl sm:text-3xl mt-3 sm:mt-0 px-7 py-2 hover:text-white hover:border-transparent hover:bg-primary transition-all duration-100'>
-                Sign In
-              </button>
+              <Link href='/signup'>
+                <button className='text-white bg-primary border border-blue-500 rounded font-kanit text-2xl sm:text-3xl px-6 py-2   sm:mr-5'>
+                  Sign Up
+                </button>
+              </Link>
+              <Link href='/signin'>
+                <button className='text-primary bg-transparent border border-blue-500  rounded font-kanit  text-2xl sm:text-3xl mt-3 sm:mt-0 px-7 py-2 hover:text-white hover:border-transparent hover:bg-primary transition-all duration-100'>
+                  Sign In
+                </button>
+              </Link>
             </div>
           </div>
           <div className='mx-10 md:mx-0 md:mr-10'>

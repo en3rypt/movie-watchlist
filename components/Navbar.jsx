@@ -94,10 +94,14 @@ const Navbar = () => {
 
           <div className='hidden sm:flex'>
             <div className='border-l-[0.8px] border-secondary h-8'></div>
-            <button className='text-primary font-kanit text-lg px-3 py-1 mx-1'>Sign In</button>
-            <button className='text-primary bg-transparent border border-blue-500 mx-1 rounded font-kanit px-3 py-1 text-lg hover:text-white hover:border-transparent hover:bg-primary transition-all duration-100'>
-              Sign Up
-            </button>
+            <Link href='/signin'>
+              <button className='text-primary font-kanit text-lg px-3 py-1 mx-1'>Sign In</button>
+            </Link>
+            <Link href='/signup'>
+              <button className='text-primary bg-transparent border border-blue-500 mx-1 rounded font-kanit px-3 py-1 text-lg hover:text-white hover:border-transparent hover:bg-primary transition-all duration-100'>
+                Sign Up
+              </button>
+            </Link>
           </div>
         </div>
         <button className='block lg:hidden pl-2' onClick={() => setIsOpen(true)}>
@@ -195,10 +199,14 @@ const Navbar = () => {
           </Link>
         </div>
         <div className='flex flex-col items-center mt-4 py-5 border-y-[1px] border-[#eeeeF8]'>
-          <button className='text-primary bg-transparent border border-blue-500 mx-1 rounded font-kanit px-3 py-1 text-xl hover:text-white hover:border-transparent hover:bg-primary transition-all duration-100'>
-            Sign Up
-          </button>
-          <button className='text-primary font-kanit text-xl px-3 py-1 mx-1 mt-4'>Sign In</button>
+          <Link href='/signup'>
+            <button className='text-primary bg-transparent border border-blue-500 mx-1 rounded font-kanit px-3 py-1 text-xl hover:text-white hover:border-transparent hover:bg-primary transition-all duration-100'>
+              Sign Up
+            </button>
+          </Link>
+          <Link href='/signin'>
+            <button className='text-primary font-kanit text-xl px-3 py-1 mx-1 mt-4'>Sign In</button>
+          </Link>
         </div>
       </SidePanel>
     </div>
