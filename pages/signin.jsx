@@ -12,11 +12,11 @@ const signin = () => {
         </a>
       </Link> */}
       <h1 className='font-kanit text-5xl font-bold text-white mt-10 mb-5'>My Watch List</h1>
-      <div className='w-screen md:w-[930px] h-[830px] rounded-2xl shadow-2xl mb-10 flex'>
+      <div className='w-screen md:w-[930px] h-[530px] rounded-2xl shadow-2xl mb-10 flex'>
         <div className='hidden md:flex justify-center items-center rounded-l-2xl h-full w-1/2 bg-gradient-to-r from-gradient3l via-gradient3m to-gradient3r '>
           <Image src={signinImg} height='344' width='500' />
         </div>
-        <div className='rounded-r-2xl bg-white h-full w-1/2 p-10'>
+        <div className='rounded-r-2xl bg-white h-full w-1/2 p-10 inset-y-0'>
           <h1 className='font-kanit font-bold text-3xl'>Sign into your account</h1>
           <p className='my-1 font-kanit font-light text-base'>
             Don't have an account? <a className='font-normal cursor-pointer'>Sign up here</a>
